@@ -1,10 +1,11 @@
 import { useState } from 'react'
+import { FaTrashCan } from "react-icons/fa6";
 import './App.css'
 
 function App() {
   const [list, setList] = useState([])
   const [inputValues, setInputValues] = useState()
-  
+
 const handleAdd = (e) => {
       console.log('')
       const inputValue = document.getElementById("input").value;
@@ -43,6 +44,9 @@ function handleChange(e) {
         return (
         <div className='each-item' key={i} id={`Item${i}`}>
         <li>{item}</li>
+        <FaTrashCan 
+        className='delete-icon'
+        />
        </div>)
         }
         )

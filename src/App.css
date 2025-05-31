@@ -39,7 +39,11 @@ body {
 .each-item {
   background-color: transparent;
   border-left: 3px solid brown;
-  margin-bottom: 2%;
+  display: flex;
+  width: 79%;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3% 10%;
 }
 
 .add-todo {
@@ -47,6 +51,11 @@ body {
  justify-content: center !important;
  align-items: center;
  margin-bottom: 7.5%;
+}
+
+.delete-icon {
+  color: brown;
+  cursor: pointer;
 }
 
 .center {
