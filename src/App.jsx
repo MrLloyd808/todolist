@@ -8,10 +8,9 @@ function App() {
 
 const handleAdd = (e) => {
       console.log('')
-      const inputValue = document.getElementById("input").value;
+      const inputValue = document.getElementById("input").value.trim();
      if (inputValue.length !== 0) { 
-      setList([...list, inputValue])
-       
+      setList([...list, inputValue])  
       setInputValues('')
      }  
     }
@@ -19,11 +18,10 @@ const handleAdd = (e) => {
 function handleChange(e) {
         setInputValues(e.target.value)
       }
-
-      function handleDelete() {
-       const newList = list.filter(item => item !== item.id)
-       setList([...list, newList])
-      }
+      function handleDelete(items) {
+      const newList = list.filter(item => item !== items)
+      setList(newList)
+  }
   return (
     <>
      <div className='todo-container'>
@@ -45,11 +43,11 @@ function handleChange(e) {
         <div className='each-item' key={i} id={`Item${i}`}>
         <li>{item}</li>
         <FaTrashCan 
-        className='delete-icon'
+             className='delete-icon'
+             onClick={() => handleDelete(item)}
         />
        </div>)
-        }
-        )
+        } )
     }
      </div>
     </>
