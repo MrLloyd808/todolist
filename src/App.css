@@ -1,0 +1,66 @@
+#root {
+  min-width: 100vw;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+.todo-container {
+  background-color: teal;
+  width: 85%;
+  margin: 0;
+  padding: 3%;
+  border-radius: 5px;
+  font-size: 1.3em;
+
+}
+
+.todo-tittle {
+  color: brown;
+  margin-bottom: 5.2%;
+  text-align: center;
+}
+
+.each-item {
+  background-color: transparent;
+  border-left: 3px solid brown;
+  margin-bottom: 2%;
+}
+
+.add-todo {
+  display: flex !important;
+ justify-content: center !important;
+ align-items: center;
+ margin-bottom: 7.5%;
+}
+
+.center {
+  text-align: center;
+}
+
+input {
+  padding: 5px;
+  border-radius: 4px;
+  margin-right: 2%;
+  background-color: rgb(5, 69, 66);
+  border: 0;
+}
+
+input::placeholder {
+  color: aqua;
+}
