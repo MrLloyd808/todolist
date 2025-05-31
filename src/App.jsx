@@ -32,7 +32,7 @@ function handleChange(e) {
             onChange={handleChange}
             id='input'
             value={inputValues}
-            placeholder='Enter TODOs' 
+            placeholder='Enter Todos' 
             className='input-todo'
       />
       <button onClick={handleAdd}>ADD</button>
@@ -44,7 +44,7 @@ function handleChange(e) {
         <li>{item}</li>
         <FaTrashCan 
              className='delete-icon'
-             onClick={() => handleDelete(item)}
+             onClick={()=>handleDelete(item)}
         />
        </div>)
         } )
