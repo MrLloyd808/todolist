@@ -3,21 +3,24 @@ import { FaTrashCan } from "react-icons/fa6";
 import './App.css'
 
 function App() {
+
   const [list, setList] = useState([])
-  const [inputValues, setInputValues] = useState()
+
+  const [inputReset, setInputReset] = useState('')
+
+function handleChange(e) {
+        setInputReset(e.target.value)
+      }
 
 const handleAdd = (e) => {
-      console.log('')
-      const inputValue = document.getElementById("input").value.trim();
+      const inputValue = inputReset.trim()
      if (inputValue.length !== 0) { 
       setList([...list, inputValue])  
-      setInputValues('')
+      setInputReset('')
      }  
     }
 
-function handleChange(e) {
-        setInputValues(e.target.value)
-      }
+
       function handleDelete(items) {
       const newList = list.filter(item => item !== items)
       setList(newList)
@@ -31,7 +34,8 @@ function handleChange(e) {
      <input type='text'
             onChange={handleChange}
             id='input'
-            value={inputValues}
+            value={inputReset}
+            autoFocus
             placeholder='Enter Todos' 
             className='input-todo'
       />

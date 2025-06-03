@@ -40,10 +40,15 @@ body {
   background-color: transparent;
   border-left: 3px solid brown;
   display: flex;
-  width: 79%;
+  width: 95%;
+  padding: 1%;
   justify-content: space-between;
   align-items: center;
-  margin: 3% 10%;
+  margin:0 2.5%;
+  text-transform: capitalize;
+  font-weight: bolder;
+  margin-bottom: 1.5%;
+  box-shadow: 0 0 10px  rgba(0, 0, 0, 0.208);
 }
 
 .add-todo {
@@ -56,6 +61,7 @@ body {
 .delete-icon {
   color: brown;
   cursor: pointer;
+  margin-right: 2%;
 }
 
 .center {
